@@ -16,14 +16,15 @@ noise = np.random.normal(mean_noise, std_dev_noise, size=len(x))
 # Generate y values with added noise
 y_with_noise = y_true + noise
 
+# Calculate residuals
+residuals = y_with_noise - y_true
+
 # Plotting
 plt.figure(figsize=(8, 6))
-plt.scatter(x, y_with_noise, label='Data Points')
-plt.plot(x, y_true, color='red', label='True Regression Line')
+plt.scatter(x, residuals, color='blue')
+plt.axhline(y=0, color='red', linestyle='--', linewidth=1)  # horizontal line at y=0
 plt.xlabel('Lifespan of a Robotics Team')
-plt.ylabel('EPA')
-plt.title('EPA vs. Lifespan of a Robotics Team')
-plt.legend()
+plt.ylabel('Residuals')
+plt.title('Residual Plot')
 plt.grid(True)
-plt.show(block=False)
-plt.close('all')
+plt.show()
