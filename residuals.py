@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
-data = np.genfromtxt('parsed_data.csv', delimiter=',', skip_header=1)
+data = np.genfromtxt('./second_sample/parsed_data.csv', delimiter=',', skip_header=1)
 
 lifespan = data[:, 0]
 mean_epa = data[:, 1]
@@ -22,4 +22,5 @@ plt.title('Residual Plot')
 plt.xlabel('Lifespan')
 plt.ylabel('Residuals')
 plt.grid(True)
+plt.savefig('./second_sample/residuals.png')
 plt.show()

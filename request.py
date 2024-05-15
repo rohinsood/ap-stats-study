@@ -6,7 +6,7 @@ import statbotics
 
 sb = statbotics.Statbotics()
 
-file_name = "parsed_data.csv"
+file_name = "./second_sample/parsed_data.csv"
 
 num_teams = 60
 
