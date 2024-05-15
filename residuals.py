@@ -5,14 +5,14 @@ from scipy.stats import linregress
 data = np.genfromtxt('./second_sample/parsed_data.csv', delimiter=',', skip_header=1)
 
 lifespan = data[:, 0]
-mean_epa = data[:, 1]
+norm_epa = data[:, 1]
 
-slope, intercept, r_value, p_value, std_err = linregress(lifespan, mean_epa)
+slope, intercept, r_value, p_value, std_err = linregress(lifespan, norm_epa)
 
-predicted_mean_epa = slope * lifespan + intercept
+predicted_norm_epa = slope * lifespan + intercept
 
 # Calculate residuals
-residuals = mean_epa - predicted_mean_epa
+residuals = norm_epa - predicted_norm_epa
 
 # Plotting
 plt.figure(figsize=(10, 6))

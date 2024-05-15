@@ -5,4 +5,4 @@
 - Coefficient of Determination (r^2): 0.15802525680527987
 - Standard Error of the Estimate (SEE): 1.4492307843645085
 - Standard Deviation of Lifespan: 6.086665753924722
-- Standard Deviation of Mean EPA: 95.1657138889842
+- Standard Deviation of Norm EPA: 95.1657138889842
